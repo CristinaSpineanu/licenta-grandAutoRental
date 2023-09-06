@@ -1,9 +1,10 @@
 Tehnologii folosite:
 
-![angular](https://angular.io/assets/images/logos/angular/angular.svg)
-![nodeJs](https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg)
-![HTML](https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg)
-![CSS](https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg)
+
+<img src="https://angular.io/assets/images/logos/angular/angular.svg" width="250px" >
+<img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" width="250px" >
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" width="250px" >
+<img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" width="250px" >
 
 
 Pentru a rula aplicația este necesar să se descarce ambele fișiere: grandautorental_Fe și grandautorental_Be. 
