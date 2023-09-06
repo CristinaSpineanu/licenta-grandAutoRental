@@ -1,12 +1,12 @@
 Tehnologii folosite:
 
 <p align="center">
-<img src="https://angular.io/assets/images/logos/angular/angular.svg" width="100px" height="100px" margin-right="20px">
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" width="100px" height="100px" margin-right="20px">
-<img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" width="100px" height="100px" margin-right="20px">
-<img src="https://camo.githubusercontent.com/4df4cf6995f81a77c935c858564a894f16b8e242ef5bbe01d1ca2f40d5991d85/68747470733a2f2f7777772e616e6b69747765626c6f6769632e636f6d2f6a6176617363726970742f6a735f696d672f6a6176617363726970742e706e67" width="100px" height="100px" margin-right="20px">
-<img src="https://az.wikipedia.org/wiki/TypeScript#/media/Fayl:Typescript_logo_2020.svg" width="100px" height="100px" margin-right="20px">
-<img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" width="100px" height="100px" margin-right="20px">
+<img src="https://angular.io/assets/images/logos/angular/angular.svg" width="100px" height="100px" margin-right="15">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" width="100px" height="100px" margin-right="15">
+<img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" width="100px" height="100px" margin-right="15">
+<img src="https://camo.githubusercontent.com/4df4cf6995f81a77c935c858564a894f16b8e242ef5bbe01d1ca2f40d5991d85/68747470733a2f2f7777772e616e6b69747765626c6f6769632e636f6d2f6a6176617363726970742f6a735f696d672f6a6176617363726970742e706e67" width="170px" height="100px" margin-right="15">
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" width="100px" height="100px" margin-right="15">
+<img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" width="100px" height="100px" margin-right="15">
 </p>
 
 Pentru a rula aplicația este necesar să se descarce ambele fișiere: grandautorental_Fe și grandautorental_Be. 
