@@ -9,7 +9,7 @@
 </div>
 
 
-Pentru a rula aplicația este necesar să se descarce ambele fișiere: grandautorental_Fe și grandautorental_Be. 
+Pentru a rula aplicația este necesar să se descarce ambele fișiere: GrandAutoRental_Fe și GrandAutoRental_Be. 
 După descărcare se va deschide fiecare folder într-un IDE și se vor rula următoarele comenzi:
 
 
@@ -17,7 +17,7 @@ După descărcare se va deschide fiecare folder într-un IDE și se vor rula urm
 
 Instalare:  npm install  (pentru instalarea tuturor pachetelor folosite)
 
-Compilare:  npm run ng:serve
+Compilare: ng serve
 
 
 <p ><b>-> Pentru folderul grandautorental_be</b> </p>
