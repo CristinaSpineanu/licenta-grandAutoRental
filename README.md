@@ -1,10 +1,10 @@
 Tehnologii folosite:
 
 <p align="center">
-<img src="https://angular.io/assets/images/logos/angular/angular.svg" width="100px" >
-<img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" width="100px" >
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" width="100px" >
-<img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" width="100px" >
+<img src="https://angular.io/assets/images/logos/angular/angular.svg" width="100px" height="100px" >
+<img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" width="100px" height="100px" >
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" width="100px" height="100px" >
+<img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" width="100px" height="100px" >
 </p>
 
 Pentru a rula aplicația este necesar să se descarce ambele fișiere: grandautorental_Fe și grandautorental_Be. 
@@ -25,6 +25,8 @@ Compilare: npm run start:dev
 
 Portul va fi: http://localhost:4200/
 
+
+-> Pentru baza de date
 
 
 HELPFUL:
