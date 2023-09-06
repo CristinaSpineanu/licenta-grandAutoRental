@@ -1,5 +1,4 @@
-<p style="font-size: 20px; text-align: center; font-weight:'400'">Tehnologii folosite:</p>
-
+<p style="font-size: 20px; text-align: center; font-weight:400">Tehnologii folosite:</p>
 <div style="display: flex; justify-content: space-between; gap: 5px; margin-bottom:40px">
     <img src="https://angular.io/assets/images/logos/angular/angular.svg" width="100px" height="100px">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" width="100px" height="100px">
