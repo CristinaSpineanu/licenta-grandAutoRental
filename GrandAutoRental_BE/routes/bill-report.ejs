@@ -1,0 +1,114 @@
+<html>
+  <head>
+    <style>
+      table {
+        font-family: "Source Sans Pro", sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      td,
+      th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+
+      footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        background-color: #f1f1f1;
+        padding: 10px 0;
+      }
+
+      .header-details {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #f1f1f1;
+        padding: 10px 0;
+        width: 100%;
+        margin-bottom: 40px;
+
+        .firm-name {
+          margin-left: 10px;
+        }
+      }
+
+      .car-details {
+        margin-top: 80px;
+      }
+
+      .company-details--factura {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 10px;
+
+      }
+      .company-details--details {
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 25px;
+      }
+      
+    </style>
+
+    <div class="header-details">
+      <h3 class="firm-name">Grand Auto Rental</h3>
+    </div>
+    <div >
+      <div class="header-company">
+      <div class="company-details--factura">Factura</div>
+      <div class="company-details--details">
+        <div>Nr. ord.registru com./an: J40/372/2002 C.I.F.: RO 14399840</div>
+        <div>Capital social subscris si varsat: 1.418.346</div>
+        <div>Cont: RO26 TREZ 7005 069X XX00 1637</div>
+        <div>
+          Banca: Trezorerie si Contabilitate Publica a Municipiului Bucuresti
+        </div>
+        <div>Sediul: 148 Virtutii, E47, Sector 6, Bucuresti 060787</div>
+        <div>Tel: +40 21 200 52 00, fax: +40 21 200 52 25</div>
+      </div>
+    </div>
+  </head>
+
+  <body>
+    <table>
+      <tr>
+        <th>Nume: <%= name %></th>
+        <th>Email: <%= email %></th>
+      </tr>
+      <tr>
+        <th>Număr telefon: <%= contactNumber %></th>
+        <th>Metoda de plată: <%= paymentMethod %></th>
+      </tr>
+    </table>
+    <div class="car-details">
+      <h3>Detalii comandă:</h3>
+      <table>
+        <tr>
+          <th>Nume:</th>
+          <th>Categorie:</th>
+          <th>Nr. de zile:</th>
+          <th>Perioada:</th>
+          <th>Preț:</th>
+          <th>Total:</th>
+        </tr>
+        <% if (carDetails.length > 0) { %> <% carDetails.forEach(car => { %>
+        <tr>
+          <td><%= car.name %></td>
+          <td><%= car.category %></td>
+          <td><%= car.quantity %></td>
+          <td><%= car.startDate %> - <%= car.endDate %></td>
+          <td><%= car.price %> €</td>
+          <td><%= car.total %> €</td>
+        </tr>
+        <% }); %> <% } %>
+      </table>
+      <h3>Total: <%= totalAmount %> €</h3>
+    </div>
+  </body>
+  <footer><h3>Mulțumim pentru că ați apelat la noi!</h3></footer>
+</html>
