@@ -13,14 +13,14 @@ Pentru a rula aplicația este necesar să se descarce ambele fișiere: GrandAuto
 După descărcare se va deschide fiecare folder într-un IDE și se vor rula următoarele comenzi:
 
 
-<p ><b>-> Pentru folderul grandautorental_fe</b> </p>
+<p ><b>-> Pentru folderul GrandAutoRental_Fe</b> </p>
 
 Instalare:  npm install  (pentru instalarea tuturor pachetelor folosite)
 
 Compilare: ng serve
 
 
-<p ><b>-> Pentru folderul grandautorental_be</b> </p>
+<p ><b>-> Pentru folderul GrandAutoRental_Be</b> </p>
 
 Instalare: npm install  (pentru instalarea tuturor pachetelor folosite)
 
