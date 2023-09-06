@@ -1,0 +1,15 @@
+@import 'src/app/stylesheets/variables';
+
+@mixin display-flex($flex-direction, $justify-content:center, $align-items:center,$flex-wrap:wrap){
+  align-items:$align-items;
+  $display:flex;
+  $flex-flow:$flex-direction $flex-wrap;
+  justify-content:$justify-content;
+}
+
+@mixin display-font($color,$color-name,$size,$weight:normal, $line-height:normal){
+  color:$color;
+  font-family: $font-name;
+  font-weight:$weight;
+  $line-height:$line-height;
+}

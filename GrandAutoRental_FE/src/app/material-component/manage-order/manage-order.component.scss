@@ -1,0 +1,172 @@
+@import "src/app/stylesheets/general";
+
+.container {
+  display: grid;
+  gap: 20px;
+
+  &-first-card {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .container-title {
+      font-weight: 600;
+    }
+
+    .container-add-btn {
+      &:not([disabled]) {
+        width: 175px;
+        padding: 6px 0;
+        padding-left: 10px;
+        padding-right: 10px;
+        white-space: nowrap;
+        color: $white;
+        border-radius: 20px;
+        background-color: $default-color;
+        border: 1px solid $default-color;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+        &:hover {
+          background-color: $default-selection;
+          border-color: $default-selection;
+          cursor: pointer;
+        }
+      }
+
+      &:disabled{
+        width: 175px;
+        padding: 6px 0;
+        padding-left: 10px;
+        padding-right: 10px;
+        white-space: nowrap;
+        color: $white;
+        border-radius: 20px;
+        background-color: grey;
+        border: 1px solid grey;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      }
+    }
+  }
+
+  &-second-card {
+    .container-title {
+      font-weight: 600;
+    }
+
+    .user-details-form {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+
+      .mat-form-field {
+        flex: 1;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &-third-card {
+    .container-title {
+      font-weight: 600;
+    }
+
+    .car-details-form {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+
+      .mat-form-field {
+        flex: 1;
+        margin-right: 10px;
+      }
+    }
+
+    .third-card-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-right: 10px;
+      margin-top: 10px;
+
+      .container-adauga-btn {
+        &:not([disabled]) {
+          width: 100px;
+          padding: 6px 0;
+          padding-left: 10px;
+          padding-right: 10px;
+          white-space: nowrap;
+          color: $white;
+          border-radius: 20px;
+          background-color: $default-color;
+          border: 1px solid $default-color;
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+          &:hover {
+            background-color: $default-selection;
+            border-color: $default-selection;
+            cursor: pointer;
+          }
+        }
+
+        &:disabled{
+            width: 100px;
+          padding: 6px 0;
+          padding-left: 10px;
+          padding-right: 10px;
+          white-space: nowrap;
+          color: $white;
+          border-radius: 20px;
+          background-color: grey;
+          border: 1px solid grey;
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        }
+      }
+
+      .container-total-btn {
+        width: 100px;
+        padding: 6px 0;
+        padding-left: 10px;
+        padding-right: 10px;
+        white-space: nowrap;
+        color: $white;
+        border-radius: 20px;
+        background-color: $default-color;
+        border: 1px solid $default-color;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      }
+    }
+  }
+
+  .disabled {
+    background-color: gray;
+    border: 1px solid gray;
+
+    &:hover {
+      background-color: gray;
+      border: 1px solid gray;
+      cursor: none;
+    }
+  }
+
+  table {
+    width: 100%;
+
+    .mat-header-cell {
+      font-weight: 600;
+      font-size: 14px;
+      color: $default-color;
+    }
+
+    .edit-icon {
+      &:hover {
+        color: $default-selection;
+        cursor: pointer;
+      }
+    }
+  }
+}

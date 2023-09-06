@@ -1,0 +1,78 @@
+<div class="signup-container">
+  <mat-toolbar>
+    <mat-toolbar-row fxLayout="row">
+      <span class="title">Înregistare</span>
+      <mat-icon (click)="inchideDialogul()">close</mat-icon>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <mat-dialog-content class="mat-typography">
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmitForm()">
+      <div fxFlex fxLayout="column">
+        <mat-form-field appearance="fill" fxFlex>
+          <mat-label>Nume</mat-label>
+          <input matInput formControlName="name" required />
+          <mat-error *ngIf="signupForm.controls.name.invalid && signupForm.controls.name.touched">
+            <span *ngIf="signupForm.controls.name.errors.required">Acest câmp este obligatoriu.</span>
+            <span *ngIf="signupForm.controls.name.errors.pattern">Invalid</span>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" fxFlex>
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="email" required />
+          <mat-error *ngIf="signupForm.controls.email.invalid && signupForm.controls.email.touched">
+            <span *ngIf="signupForm.controls.email.errors.required">Acest câmp este obligatoriu.</span>
+            <span *ngIf="signupForm.controls.email.errors.pattern">Invalid</span>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" fxFlex>
+          <mat-label>Număr de telefon</mat-label>
+          <input matInput formControlName="contactNumber" required />
+          <mat-error *ngIf="signupForm.controls.contactNumber.invalid && signupForm.controls.contactNumber.touched">
+            <span *ngIf="signupForm.controls.contactNumber.errors.required">Acest câmp este obligatoriu.</span>
+            <span *ngIf="signupForm.controls.contactNumber.errors.pattern">Invalid</span>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" fxFlex>
+          <mat-label>Parolă</mat-label>
+          <div class="password-input">
+            <input
+              matInput
+              [type]="parolaAscunsa ? 'password' : 'text'"
+              formControlName="password"
+              required
+            />
+            <button
+              mat-icon-button
+              (click)="afiseazaParola($event)"
+              [attr.aria-label]="parolaAscunsa ? 'Hide Password' : 'Show Password'"
+            >
+              <mat-icon [ngClass]="{ 'visibility-off': parolaAscunsa, 'visibility-on': !parolaAscunsa }">
+                {{ parolaAscunsa ? 'visibility_off' : 'visibility' }}
+              </mat-icon>
+            </button>
+          </div>
+
+          <mat-error *ngIf="signupForm.controls.password.invalid && signupForm.controls.password.touched">
+            <span *ngIf="signupForm.controls.password.errors.required">Acest câmp este obligatoriu.</span>
+            <span *ngIf="signupForm.controls.password.errors.pattern">Invalid</span>
+          </mat-error>
+        </mat-form-field>
+      </div>
+    </form>
+  </mat-dialog-content>
+
+  <mat-dialog-actions>
+    <button mat-raised-button class="btn-cancel" (click)="inchideDialogul()">Cancel</button>
+    <button mat-raised-button class="btn-submit" type="submit" (click)="onSubmitForm()" [disabled]="!(signupForm.valid && signupForm.dirty)">
+      Înregistare
+    </button>
+  </mat-dialog-actions>
+
+  <div class="footer-details">
+    <span> Ai deja un cont? </span>
+    <span class="footer-details--login" (click)="deschideLoginDialog()"> Loghează-te! </span>
+  </div>
+</div>

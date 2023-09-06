@@ -1,0 +1,84 @@
+<div class="container">
+  <mat-card class="container-first-card">
+    <div class="container-title">Facturi</div>
+  </mat-card>
+
+  <mat-card>
+    <mat-form-field appearance="fill">
+      <mat-label>Filtrează</mat-label>
+      <input matInput (keyup)="filtreazaData($event)" #input />
+    </mat-form-field>
+  </mat-card>
+
+  <div class="responsive_table">
+    <table mat-table [dataSource]="dataSource">
+      <ng-container matColumnDef="nume">
+        <th mat-header-cell *matHeaderCellDef>Nume</th>
+        <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef>Email</th>
+        <td mat-cell *matCellDef="let element">{{ element.email }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="numarTelefon">
+        <th mat-header-cell *matHeaderCellDef>Număr de telefon</th>
+        <td mat-cell *matCellDef="let element">{{ element.contactNumber }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="metodaPlata">
+        <th mat-header-cell *matHeaderCellDef>Metodă de plată</th>
+        <td mat-cell *matCellDef="let element">{{ element.paymentMethod }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="total">
+        <th mat-header-cell *matHeaderCellDef>Total</th>
+        <td mat-cell *matCellDef="let element">{{ element.total }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="editeaza">
+        <th mat-header-cell *matHeaderCellDef>Acțiune</th>
+        <td
+          mat-cell
+          *matCellDef="let element; let i = index"
+          class="action-link action-group"
+        >
+          <img
+            [src]="!deleteIconHovered[i] ? './assets/img/preview.png' :'./assets/img/preview-hover.png'"
+            alt="Preview"
+            class="edit-icon"
+            matTooltip="Vizualizează"
+            (click)="gestioneazaVizualizare(element)"
+            (mouseover)="deleteIconHovered[i]=true"
+            (mouseleave)="deleteIconHovered[i]=false"
+
+          />
+
+          <img
+            [src]="!pdfIconHovered[i] ? './assets/img/export-pdf.png' :'./assets/img/export-hover.png'"
+            alt="Download pdf"
+            class="pdf-icon"
+            matTooltip="PDF"
+            (click)="gestioneazaDescarcarea( element)"
+            (mouseover)="pdfIconHovered[i]=true"
+            (mouseleave)="pdfIconHovered[i]=false"
+          />
+
+          <img
+          [src]="!previewIconHovered[i] ? './assets/img/delete.png' :'./assets/img/delete-hover.png'"
+          alt="Delete"
+            class="delete-icon"
+            matTooltip="Șterge"
+            (click)="gestioneazaStergerea( element)"
+            (mouseover)="previewIconHovered[i]=true"
+            (mouseleave)="previewIconHovered[i]=false"
+          />
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="coloaneAfisate; sticky: true"></tr>
+      <tr mat-row *matRowDef="let row; columns: coloaneAfisate"></tr>
+    </table>
+  </div>
+</div>

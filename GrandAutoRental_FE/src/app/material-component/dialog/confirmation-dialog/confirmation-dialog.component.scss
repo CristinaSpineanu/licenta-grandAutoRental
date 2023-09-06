@@ -1,0 +1,14 @@
+@import "src/app/stylesheets/variables";
+
+h5 {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.mat-dialog-actions {
+  button.mat-raised-button {
+    &:hover {
+      background-color: $category-hover;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+<mat-nav-list appAccordion>
+  <mat-list-item
+    appAccordionLink
+    *ngFor="let menuItem of menuItems.getMenuItem()"
+    routerLinkActive="selected"
+    group="{{ menuItem.stare }}"
+  >
+    <a
+      appAccordionToggle
+      [routerLink]="['/grandautorental', menuItem.stare]"
+      *ngIf="menuItem.role === '' || menuItem.role === tokenPayload.role"
+    >
+    <mat-icon>{{menuItem.iconName}}</mat-icon>
+    <span>{{menuItem.nume}}</span>
+  </a>
+  </mat-list-item>
+</mat-nav-list>

@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="container-image">
+    <img src="./assets/img/front-page.jpg" alt="Grand Auto Rental-Front Page" />
+  </div>
+
+  <div class="container-body sticky">
+    <nav>
+      <a href="#" class="logo">
+        <mat-icon>menu</mat-icon>
+        <span> GRAND AUTO RENTAL </span>
+      </a>
+      <ul>
+        <li class="home-buttons btn-inregistare">
+          <a (click)="onSignupAction()">Înregistare</a>
+        </li>
+        <li class="home-buttons  btn-parola">
+          <a (click)="onForgetPasswordAction()">Ai uitat parola?</a>
+        </li>
+        <li class="home-buttons  btn-autentificare">
+          <a (click)="onLoginAction()">Autentificare</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="payMethods">
+    <div *ngFor="let metoda of metodeDePlata">
+      <img src="./assets/img/{{ metoda }}" alt="Metoda de plata" />
+    </div>
+  </div>
+
+  <div class="container-footer-top">
+    <div class="container-footer-top--social-media">
+      <span class="social-media--text">Urmarește-ne pe:</span>
+      <div class="social-media--group">
+        <div *ngFor="let platform of platformeGroup">
+          <a href="{{ platform.link }}" target="_blank">
+            <img src="./assets/img/{{ platform.nume }}.png" alt="Social media" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-footer-top--drepturi">
+      <span
+        >Toate drepturile rezervate ©Grand Auto Rental S.R.L 2020 -
+        {{ anulCurent }}.</span
+      >
+    </div>
+
+    <div class="container-footer-top--logo">
+      <img src="./assets/img/logo.png" alt="Grand Auto Logo" />
+    </div>
+  </div>
+</div>

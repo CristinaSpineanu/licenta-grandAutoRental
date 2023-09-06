@@ -1,0 +1,9 @@
+@import "src/app/stylesheets/general";
+
+.profil-container {
+  .icon-mode {
+    &:hover {
+      color: $default-selection;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+<div>
+  <mat-card>
+    <div class="section-title">Panou de control</div>
+  </mat-card>
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <div class="container">
+          <h2 class="title">Categorii:</h2>
+          <h1 class="title">{{data?.category}}</h1>
+          <button class="button" [routerLink]="['/grandautorental/category']">Descoperă</button>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card">
+        <div class="container">
+          <h2 class="title">Masini:</h2>
+          <h1 class="title">{{data?.car}}</h1>
+          <button class="button" [routerLink]="['/grandautorental/car']">Descoperă</button>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card">
+        <div class="container">
+          <h2 class="title">Facturi:</h2>
+          <h1 class="title">{{data?.bill}}</h1>
+          <button class="button" [routerLink]="['/grandautorental/bills']">Descoperă</button>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card">
+        <div class="container">
+          <h2 class="title">Utilizatori:</h2>
+          <h1 class="title">{{data?.category}}</h1>
+          <button class="button" [routerLink]="['/grandautorental/user']">Descoperă</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

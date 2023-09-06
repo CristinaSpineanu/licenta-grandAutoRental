@@ -1,0 +1,71 @@
+@import "src/app/stylesheets/general";
+
+.category-dialog--container{
+  .mat-toolbar {
+    width: auto;
+    margin: -24px;
+    margin-bottom: 10px;
+  }
+
+  .mat-toolbar-row {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+
+    .mat-icon {
+      color: $white;
+      cursor: pointer;
+    }
+  }
+
+  .mat-form-field {
+    padding: 5px;
+  }
+
+
+  .title {
+    flex: 1 1 auto;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    color: $white;
+  }
+
+  .mat-dialog-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .btn {
+      &-cancel {
+        background-color: $default-gray;
+        color: $white;
+
+        &:hover {
+          background-color: $default-selection;
+        }
+      }
+
+      &-submit {
+        background-color: $default-color;
+        color: $white;
+
+        &:not([disabled]):hover {
+          background-color: $default-green;
+          color: $white;
+        }
+      }
+    }
+  }
+
+  .footer-details {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      margin-right: 5px;
+    }
+  }
+}

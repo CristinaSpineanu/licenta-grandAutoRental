@@ -1,0 +1,263 @@
+@import "src/app/stylesheets/general";
+
+.container {
+  box-sizing: border-box;
+  font-family: $primary-font;
+  min-width: 100vw;
+
+  &-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &-body {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 65px;
+    background-color: $default-color;
+
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $white;
+      padding: 14px 20px 14px 20px;
+      text-decoration: none;
+      text-align: center;
+
+      &:hover {
+        cursor: pointer;
+        color: $default-hover-light;
+      }
+
+      .mat-icon {
+        margin-right: 10px;
+        vertical-align: middle;
+      }
+
+      .home-buttons {
+        > a {
+          &:hover {
+            cursor: pointer !important;
+            background-color: red;
+          }
+        }
+      }
+    }
+  }
+
+  .payMethods {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    img {
+      height: 70px;
+      filter: grayscale(100%);
+
+      &:hover {
+        filter: grayscale(0);
+        cursor: pointer;
+      }
+    }
+  }
+
+  &-footer-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: $default-color;
+
+    &--social-media {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .social-media--text {
+        padding-left: 40px;
+        color: $white;
+      }
+
+      .social-media--group {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 10px;
+        gap: 10px;
+
+         img {
+          height: 30px;
+
+          &:hover{
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    &--drepturi span{
+      color:$white;
+    }
+
+    &--logo img {
+      width: 90px;
+      height: 90px;
+      margin-right: 40px;
+
+    }
+  }
+
+
+
+  .sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+  }
+
+  @media (max-width: 1024px) {
+    &-body {
+      height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    nav {
+      flex-direction: column;
+    }
+
+    a.logo {
+      margin-right: 0px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    ul {
+      width: 100%;
+      margin-bottom: 1em;
+      justify-content: space-between;
+    }
+
+    ul li a {
+      margin-left: 0px;
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    .column {
+      flex: 50%;
+    }
+    nav {
+      align-items: flex-start;
+    }
+  }
+
+  @media (max-width: 768px) {
+    a.logo {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    ul li {
+      margin: 0.3em;
+      text-align: center;
+    }
+
+    ul li a {
+      margin-left: 0px;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    .row,
+    .navbar {
+      flex-direction: column;
+    }
+  }
+}
+
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.side {
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+.main {
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 25%;
+  padding: 20px;
+}
+
+nav {
+  display: flex;
+  width: 90%;
+}
+
+a.logo {
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+ul {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: $white;
+  position: relative;
+  font-size: 1.25em;
+}
+
+a:hover::after {
+  transition: all 0.35s;
+}
+
+a::after {
+  right: 50%;
+  left: 50%;
+}
+
+a:hover::after {
+  right: 0;
+  left: 0;
+}

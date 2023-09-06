@@ -1,0 +1,16 @@
+<div class="profil-container">
+  <button  mat-icon-button class="icon-mode" (click)="schimbaModul()">
+    <mat-icon >{{lightMode? 'light_mode' : 'dark_mode'}}</mat-icon>
+  </button>
+  <button [matMenuTriggerFor]="profile" mat-icon-button class="m-r-5 ">
+    <mat-icon >account_circle</mat-icon>
+  </button>
+  <mat-menu #profile="matMenu" class="mymegamenu">
+    <button mat-menu-item (click)="schimbaParola()">
+      <mat-icon>lock_reset</mat-icon> Schimbă parola
+    </button>
+    <button mat-menu-item (click)="logOut()">
+      <mat-icon>exit_to_app</mat-icon>Deloghează-te
+    </button>
+  </mat-menu>
+</div>

@@ -1,0 +1,67 @@
+<div class="view__bill-container">
+  <mat-toolbar>
+    <mat-toolbar-row fxLayout="row">
+      <span class="title">Vizualizează factura</span>
+      <span class="spacer"></span>
+      <mat-icon (click)="inchideDialogul()">close</mat-icon>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <mat-dialog-content>
+    <table id="customers">
+      <tr>
+        <td><b>Nume: </b>{{ data.name }}</td>
+        <td><b>Email: </b>{{ data.email }}</td>
+      </tr>
+      <tr>
+        <td><b>Număr de telefon: </b>{{ data.contactNumber }}</td>
+        <td><b>Metoda de plată: </b>{{ data.paymentMethod }}</td>
+      </tr>
+    </table>
+    <div class="responsive_table">
+      <br />
+      <table mat-table [dataSource]="dataSource" class="bill_details-table">
+        <ng-container matColumnDef="nume">
+          <th mat-header-cell *matHeaderCellDef>Nume</th>
+          <th mat-cell *matCellDef="let element">{{ element.name }}</th>
+        </ng-container>
+
+        <ng-container matColumnDef="categorie">
+          <th mat-header-cell *matHeaderCellDef>Categorie</th>
+          <th mat-cell *matCellDef="let element">{{ element.category }}</th>
+        </ng-container>
+
+        <ng-container matColumnDef="pret">
+          <th mat-header-cell *matHeaderCellDef>Preț</th>
+          <th mat-cell *matCellDef="let element">{{ element.price }}</th>
+        </ng-container>
+
+        <ng-container matColumnDef="cantitate">
+          <th mat-header-cell *matHeaderCellDef>Nr. de zile</th>
+          <th mat-cell *matCellDef="let element">{{ element.quantity }}</th>
+        </ng-container>
+
+        <ng-container matColumnDef="perioada">
+          <th mat-header-cell *matHeaderCellDef>Perioadă</th>
+          <th mat-cell *matCellDef="let element">
+            {{ element.startDate + " - " + element.endDate }}
+          </th>
+        </ng-container>
+
+        <ng-container matColumnDef="total">
+          <th mat-header-cell *matHeaderCellDef>Total</th>
+          <th mat-cell *matCellDef="let element">{{ element.total }}</th>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="coloaneAfisate; sticky: true"></tr>
+        <tr mat-row *matRowDef="let row; columns: coloaneAfisate"></tr>
+      </table>
+    </div>
+  </mat-dialog-content>
+
+  <mat-dialog-actions>
+    <button mat-raised-button class="btn-cancel" (click)="inchideDialogul()">
+      Închide fereastra
+    </button>
+  </mat-dialog-actions>
+</div>

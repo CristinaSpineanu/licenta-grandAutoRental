@@ -1,0 +1,100 @@
+<div class="car-dialog--container">
+  <mat-toolbar>
+    <mat-toolbar-row>
+      <span class="title">{{ dialogData.action }} mașină</span>
+      <mat-icon (click)="inchideDialogul()">close</mat-icon>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <mat-dialog-content>
+    <form [formGroup]="carForm">
+      <div fxFlex fxLayout="column">
+        <div fxLayout="row wrap">
+          <mat-form-field appearance="fill" fxFlex>
+            <mat-label>Nume</mat-label>
+            <input matInput formControlName="name" required />
+            <mat-error
+              *ngIf="
+                carForm.controls.name.touched && carForm.controls.name.invalid
+              "
+            >
+              <span *ngIf="carForm.controls.name.errors.required">
+                Acest câmp este obligatoriu.</span
+              >
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div fxLayout="row wrap">
+          <mat-form-field appearance="fill" fxFlex>
+            <mat-label>Categorie</mat-label>
+            <mat-select formControlName="categoryId">
+              <mat-option
+                *ngFor="let categorie of categorii"
+                [value]="categorie.id"
+                >{{ categorie.name }}</mat-option
+              >
+            </mat-select>
+            <mat-error
+              *ngIf="
+                carForm.controls.categoryId.touched &&
+                carForm.controls.categoryId.invalid
+              "
+            >
+              <span *ngIf="carForm.controls.categoryId.errors.required">
+                Acest câmp este obligatoriu.</span
+              >
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill" fxFlex>
+            <mat-label>Preț</mat-label>
+            <input matInput formControlName="price" required />
+            <mat-error
+              *ngIf="
+                carForm.controls.price.touched && carForm.controls.price.invalid
+              "
+            >
+              <span *ngIf="carForm.controls.price.errors.required">
+                Acest câmp este obligatoriu.</span
+              >
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div fxFlex fxLayout="row wrap">
+          <mat-form-field appearance="fill" fxFlex>
+            <mat-label>Descriere</mat-label>
+            <input matInput formControlName="description" required />
+            <mat-error
+              *ngIf="
+                carForm.controls.description.touched &&
+                carForm.controls.description.invalid
+              "
+            >
+              <span *ngIf="carForm.controls.description.errors.required">
+                Acest câmp este obligatoriu.</span
+              >
+              <span *ngIf="carForm.controls.description.errors.pattern">
+                Acest câmp este invalid.</span
+              >
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+    </form>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-raised-button class="btn-cancel" (click)="inchideDialogul()">
+      Cancel
+    </button>
+    <button
+      mat-raised-button
+      class="btn-submit"
+      type="submit"
+      (click)="onSubmit()"
+      [disabled]="!(carForm.valid && carForm.dirty)"
+    >
+      {{ actiune }}
+    </button>
+  </mat-dialog-actions>
+</div>

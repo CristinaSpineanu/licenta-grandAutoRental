@@ -1,0 +1,43 @@
+<div class="category-dialog--container">
+  <mat-toolbar>
+    <mat-toolbar-row>
+      <span class="title">{{ dialogActiune  }} categorie</span>
+      <mat-icon (click)="inchideDialogul()">close</mat-icon>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <mat-dialog-content>
+    <form [formGroup]="categoryForm">
+      <div fxFlex fxLayout="column">
+        <div fxLayout="row wrap"></div>
+        <mat-form-field appearance="fill" fxFlex>
+          <mat-label>Nume</mat-label>
+          <input matInput formControlName="name" required>
+          <mat-error
+            *ngIf="
+              categoryForm.controls.name.touched &&
+              categoryForm.controls.name.invalid
+            "
+          >
+            <span *ngIf="categoryForm.controls.name.errors.required">
+              Acest câmp este obligatoriu.</span
+            >
+          </mat-error>
+        </mat-form-field>
+      </div>
+    </form>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-raised-button class="btn-cancel" (click)="inchideDialogul()">
+      Cancel
+    </button>
+    <button
+      mat-raised-button
+      class="btn-submit"
+      type="submit"
+      (click)="onSubmit()"
+      [disabled]="!(categoryForm.valid && categoryForm.dirty)"
+    >
+      {{ actiune }}
+    </button>
+  </mat-dialog-actions>
+</div>
