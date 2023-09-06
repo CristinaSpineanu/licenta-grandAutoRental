@@ -36,6 +36,6 @@ HELPFUL:
 <li> npm cache clean --force </li>
 <li>npm rm -rf node_modules package-lock.json --force </li>
 <li> npm install --force</li>
-<li> npm run ng:serve</li>
+<li> În bash terminal se va rula:  ng serve</li>
 </ul>
 
